@@ -16,6 +16,7 @@ function createGrid(gridSize) {
 
     for (let i = 0; i < gridArea; i++) {
         let gridItem = document.createElement("div");
+        gridItem.className = "canvas-cells";
         canvasGrid.insertAdjacentElement("beforeend", gridItem);
     }
     let gridPixels = canvasGrid.querySelectorAll("div");
