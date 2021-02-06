@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Etch A Sketch!</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+
+    <body>
+        <div id="main-container">
+            <div id="canvas-info">
+                <h1>Etch A Sketch!</h1>
+                <p>
+                    The canvas to the right is yours to manipulate. Use your
+                    mouse and the options available below to fill up the grid
+                    with your imagination. Go wild!
+                </p>
+                <div id="options">
+                    <span>Size:</span>
+                    <span id="size-value">16</span>
+                    <button
+                        type="button"
+                        id="random-size-btn"
+                        class="randomize-btn"
+                    >
+                        Randomize
+                    </button>
+                    <input
+                        type="range"
+                        min="1"
+                        max="50"
+                        value="16"
+                        id="size-slider"
+                    />
+
+                    <span>Choose you own color:</span>
+                    <input type="color" id="color-picker" value="#000000" />
+                    <button
+                        type="button"
+                        id="random-color-btn"
+                        class="randomize-btn"
+                    >
+                        Randomize
+                    </button>
+                </div>
+                <button type="button" id="reset-button">Reset</button>
+            </div>
+            <div id="canvas-grid"></div>
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+</html>
