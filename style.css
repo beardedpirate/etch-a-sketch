@@ -84,7 +84,7 @@ body {
 
 .randomize-btn:hover {
     background-color: rgb(233, 233, 233);
-    box-shadow: var(--blue) 2px 2px 4px;
+    box-shadow: var(--blue) 2px 2px;
 }
 
 #reset-button {
@@ -102,7 +102,7 @@ body {
 
 #reset-button:hover {
     background-color: rgb(255, 192, 140);
-    box-shadow: var(--orange-red) 0px 0px 4px;
+    box-shadow: var(--orange-red) 2px 2px;
 }
 
 #canvas-grid {
