@@ -20,12 +20,21 @@ function createGrid(gridSize) {
         canvasGrid.insertAdjacentElement("beforeend", gridItem);
     }
     let gridPixels = canvasGrid.querySelectorAll("div");
-    gridPixels.forEach((gridPixel) =>
-        gridPixel.addEventListener("mouseover", colorGrid)
-    );
+
+    canvasGrid.addEventListener("mousedown", () => {
+        gridPixels.forEach((gridPixel) =>
+            gridPixel.addEventListener("mousemove", colorize)
+        );
+    });
+
+    canvasGrid.addEventListener("mouseup", () => {
+        gridPixels.forEach((gridPixel) =>
+            gridPixel.removeEventListener("mousemove", colorize)
+        );
+    });
 }
 
-function colorGrid() {
+function colorize() {
     this.style.backgroundColor = `${color}`;
 }
 
